@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:wght@100..900&family=Kulim+Park:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400;1,600;1,700&family=Sniglet:wght@400;800&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-color: #1b192b; /* Основной глубокий темный фон */
+  --card-bg: #1a1a1a; /* Фон для карточек фильмов */
+  --text-main: #ffffff; /* Основной цвет текста */
+  --text-muted: #aaaaaa; /* Цвет для года, жанра и второстепенного текста */
+  --accent-color: #ff3344; /* Контрастный цвет для кнопок, активных элементов */
+  --rating-good: #28a745; /* Зеленый цвет для высокого рейтинга */
+  --font-main: "Kulim Park", sans-serif;
+  --border-radius: 10px;
+}
+
+body {
+  font-family: var(--font-main);
+  background: var(--bg-color);
+  color: var(--text-main);
+  line-height: 1.5;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button,
+input {
+  font-family: inherit;
+  border: none;
+  outline: none;
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+}
+
+.popular-movies {
+  border-radius: 5px;
+  padding: 0 10px;
+  background-color: #ce1f2da9;
+    .__title {
+    font-size: 30px;
+  }
+}
+
+.nav {
+  margin-left: 5vh;
+}
+
+.search-bar {
+  border-radius: var(--border-radius);
+  padding: 10px 24px;
+  font-size: medium;
+  border: 1px solid #ffffffe6;
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.search-bar:focus {
+  border-color: var(--accent-color, #ff3344);
+
+  box-shadow: 0 0 15px rgba(255, 51, 68, 0.422);
+
+  outline: none;
+}
+
+.movie-card {
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #df38385b;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.movie-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent-color, #ff3344);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
